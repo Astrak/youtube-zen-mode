@@ -1,0 +1,43 @@
+/* HOME PAGE RECOMMENDATIONS */
+/* Home page recommendations. */
+ytd-two-column-browse-results-renderer[page-subtype="home"] #primary {
+    display: none;
+}
+/* Home page recommendations' skeleton visible before thumbnails' retrieval. */
+#home-page-skeleton {
+    visibility: hidden;
+}
+
+/* PLAYER RECOMMENDATIONS */
+/* Recommendations' column. */
+ytd-watch-flexy #related {
+    display: none;
+}
+/* Recommendations' column width: default to 0 when no recommendations. */
+ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton
+    #secondary.style-scope.ytd-watch-flexy {
+    width: auto;
+    min-width: 0;
+    max-width: 402px;
+}
+
+/* COMMENTS SECTION */
+/* Comments section */
+#comments {
+    display: none;
+}
+ytd-video-secondary-info-renderer.ytd-watch-flexy {
+    border-bottom: 0;
+}
+
+/* TODO: fix video size in certain aspect ratios */
+/*.html5-endscreen {
+    display: none;
+}
+#dismissable {
+    display: none;
+}
+#continuations {
+    display: block;
+}
+ */

@@ -1,0 +1,11 @@
+{
+    "name": "youtube-zen-mode",
+    "version": "0.0.1",
+    "description": "An extension for Chrome that removes suggestions on Youtube and cleanses the layout.",
+    "main": "manifest.json",
+    "author": "Atrahasis <coffre.a@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "gen-images": "convert -resize 128 ./images/yzm256.png ./images/yzm128.png && convert -resize 48 ./images/yzm256.png ./images/yzm48.png && convert -resize 32 ./images/yzm256.png ./images/yzm32.png && convert -resize 16 ./images/yzm256.png ./images/yzm16.png"
+    }
+}

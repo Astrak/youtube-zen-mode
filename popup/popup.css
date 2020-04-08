@@ -1,0 +1,100 @@
+body {
+    --logo-size: 26px;
+    --font-size-big: 20px;
+    --font-size-normal: 14px;
+    --font-size-small: 10px;
+    --spacing: 20px;
+    --transition-time: 0.2s;
+    --border-width: 3px;
+    --white: hsl(0, 0%, 95%);
+    --white-darker: hsl(0, 0%, 90%);
+    --grey: hsl(0, 0%, 85%);
+    --grey-darker: hsl(0, 0%, 75%);
+    --blue: hsl(231, 100%, 65%);
+    --blue-darker: hsl(231, 100%, 55%);
+    --blue-lighter: hsl(231, 100%, 75%);
+    background: var(--white);
+    font-size: var(--font-size-normal);
+    margin: 0;
+    width: 350px;
+}
+
+header {
+    position: relative;
+}
+
+h1 {
+    text-align: left;
+    font-size: var(--font-size-big);
+    background: var(--blue);
+    padding: calc(var(--spacing) + 2px);
+    padding-left: calc(var(--spacing) * 1.5 + var(--logo-size));
+    padding-bottom: calc(var(--spacing) - 2px);
+    padding-top: calc(var(--spacing) + 2px);
+    border-bottom: solid var(--border-width) var(--blue-darker);
+    margin: 0;
+    color: var(--white);
+    font-weight: normal;
+}
+
+#logo {
+    width: var(--logo-size);
+    position: absolute;
+    top: calc(var(--spacing) - 2px);
+    left: var(--spacing);
+}
+
+#content {
+    margin: var(--spacing);
+}
+
+#switch {
+    position: absolute;
+    right: var(--spacing);
+    top: calc(var(--spacing) + var(--logo-size) / 3 - 1px);
+    width: calc(var(--logo-size) * 2);
+    height: calc(var(--logo-size) / 3);
+}
+
+#switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white-darker);
+    -webkit-transition: 0.4s;
+    transition: var(--transition-time);
+    border-radius: 34px;
+    box-shadow: 0 0 3px var(--blue-darker);
+}
+
+#switch .slider:before {
+    border-radius: 50%;
+    position: absolute;
+    margin-top: calc(var(--logo-size) / -3);
+    content: "";
+    height: var(--logo-size);
+    width: var(--logo-size);
+    background-color: var(--white);
+    -webkit-transition: 0.4s;
+    transition: var(--transition-time);
+    box-shadow: 0 0 5px var(--blue-darker);
+}
+
+#switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#switch input:checked + .slider {
+    background-color: var(--blue-lighter);
+}
+
+#switch input:checked + .slider:before {
+    -webkit-transform: translateX(var(--logo-size));
+    -ms-transform: translateX(var(--logo-size));
+    transform: translateX(var(--logo-size));
+}
