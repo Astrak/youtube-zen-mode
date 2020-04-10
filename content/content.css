@@ -30,6 +30,10 @@ ytd-video-secondary-info-renderer.ytd-watch-flexy {
     border-bottom: 0;
 }
 
+/* VIDEO FIXES */
+video.html5-main-video {
+    min-width: -webkit-fill-available;
+}
 /* TODO: fix video size in certain aspect ratios */
 /*.html5-endscreen {
     display: none;
